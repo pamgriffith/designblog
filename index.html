@@ -6,16 +6,15 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        {% image thumb {{ post.featured_image }} %}
-      </li>
+  <ul>
+    {% assign sortedcats = site.categories | sort %}
+    {% for category in sortedcats %}
+      {% assign name = category | first %}
+      {% assign posts = category | last %}
+      {% capture link %}{{site.baseurl}}/{{name}}/{% endcapture %}
+      {% for post in posts limit:1 %}
+        {% include polaroid.html image=post.featured_image title=name link=link %}
+      {% endfor %}
     {% endfor %}
   </ul>
 

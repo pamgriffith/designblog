@@ -10,6 +10,12 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
+gems:
+  - jekyll-archives
+
+encoding: utf-8
+permalink: "/:categories/:title/"
+
 # Build settings
 markdown: kramdown
 
@@ -21,3 +27,21 @@ image:
     thumb:
       width: 300
       height: 300
+
+# Pagination
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Archive pages
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: 'cat-archive'
+  permalinks:
+    category: '/:name/'
+
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'README.md'
