@@ -12,3 +12,12 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+# Generated image settings
+image:
+  source: uploads
+  output: generated
+  presets:
+    thumb:
+      width: 300
+      height: 300

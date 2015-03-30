@@ -1,0 +1,8 @@
+---
+layout: post
+title: "test post 2"
+categories: cat2
+featured_image: '2015/03/test2.png'
+---
+
+This is a test post
