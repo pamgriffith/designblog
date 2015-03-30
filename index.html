@@ -1,23 +1,17 @@
 ---
 layout: default
+bodyclass: 'archive'
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul>
-    {% assign sortedcats = site.categories | sort %}
-    {% for category in sortedcats %}
-      {% assign name = category | first %}
-      {% assign posts = category | last %}
-      {% capture link %}{{site.baseurl}}/{{name}}/{% endcapture %}
-      {% for post in posts limit:1 %}
-        {% include polaroid.html image=post.featured_image title=name link=link %}
-      {% endfor %}
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div>
+	<ul class="post-list">
+		{% assign sortedcats = site.categories | sort %}
+		{% for category in sortedcats %}
+			{% assign name = category | first %}
+			{% assign posts = category | last %}
+			{% capture link %}{{site.baseurl}}/{{name}}/{% endcapture %}
+			{% for post in posts limit:1 %}
+				{% include polaroid.html image=post.featured_image title=name link=link %}
+			{% endfor %}
+		{% endfor %}
+	</ul>
 </div>

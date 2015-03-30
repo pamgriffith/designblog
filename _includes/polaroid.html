@@ -1,8 +1,8 @@
 <li class="polaroid">
-	<div class="image-wrapper">
-		<a href="{{ include.link }}">
-			{% image thumb {{ include.image }} %}
-		</a>
-	</div>
-	<h2 class="photo-label"><a href="{{ include.link }}">{{ include.title }}</a></h2>
+	<a href="{{ include.link }}">
+		<div class="image-wrapper">
+				{% image thumb {{ include.image }} %}
+		</div>
+		<h2 class="photo-label">{{ include.title }}</h2>
+	</a>
 </li>
