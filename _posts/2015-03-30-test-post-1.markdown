@@ -1,8 +1,0 @@
----
-layout: post
-title: "test post 1"
-categories: cat1
-featured_image: '2015/03/test1.png'
----
-
-This is a test post
