@@ -1,0 +1,26 @@
+---
+layout: post
+status: publish
+published: true
+title: Nobel
+author:
+  display_name: Pam
+  login: Pam
+  email: pam@pamgriffith.net
+  url: ''
+author_login: Pam
+author_email: pam@pamgriffith.net
+wordpress_id: 166
+wordpress_url: http://www.commonplacedesign.com/?p=166
+date: !binary |-
+  MjAxNC0wOC0yNiAxOTo0NDo0NyAtMDQwMA==
+date_gmt: !binary |-
+  MjAxNC0wOC0yNiAxOTo0NDo0NyAtMDQwMA==
+categories:
+- Sans-Serif
+- Geometric
+tags: []
+comments: []
+---
+
+<p style="text-align: center;"><a href="http:&#47;&#47;blog.webtype.com&#47;?p=559"><img src='http:&#47;&#47;www.commonplacedesign.com&#47;wp-content&#47;uploads&#47;Nobel-family.png' alt='' &#47;><&#47;a><&#47;p></p>
