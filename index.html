@@ -8,9 +8,10 @@ bodyclass: 'archive'
 		{% for category in sortedcats %}
 			{% assign name = category | first %}
 			{% assign posts = category | last %}
-			{% capture link %}{{site.baseurl}}/{{name}}/{% endcapture %}
+			{% capture link %}{{site.baseurl}}/{{name|replace:' ','-'}}/{% endcapture %}
+			{% assign capname = name | capitalize %}
 			{% for post in posts limit:1 %}
-				{% include polaroid.html image=post.featured_image title=name link=link %}
+				{% include polaroid.html image=post.featured_image title=capname link=link %}
 			{% endfor %}
 		{% endfor %}
 	</ul>
