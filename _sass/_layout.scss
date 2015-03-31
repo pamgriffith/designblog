@@ -14,8 +14,8 @@ body.single {
 /* Paper cards */
 @mixin paper {
   background-color: $white;
-  margin: 4%;
-  padding: 4%;
+  margin: $base-font-size 4%;
+  padding: $base-font-size 4%;
   position: relative;
   box-shadow: 
     0 0 50px rgba(140, 129, 108, 0.5) inset,
@@ -23,24 +23,24 @@ body.single {
 
   /* resize margins to match polaroid columns */
   @include media-query($col2) {
-    margin: 2%;
-    padding: 2%;
+    margin: $base-font-size 2%;
+    padding: $base-font-size 2%;
   }
   @include media-query($col3) {
-    margin: 1.333%;
-    padding: 1.333%;
+    margin: $base-font-size 1.333%;
+    padding: $base-font-size 1.333%;
   }
   @include media-query($col4) {
-    margin: 1%;
-    padding: 1%;
+    margin: $base-font-size 1%;
+    padding: $base-font-size 1%;
   }
   @include media-query($col5) {
-    margin: .8%;
-    padding: .8%;
+    margin: $base-font-size .8%;
+    padding: $base-font-size .8%;
   }
   @include media-query($col6) {
-    margin: .667%;
-    padding: .667%;
+    margin: $base-font-size .667%;
+    padding: $base-font-size .667%;
   }
   
   /* tack */
@@ -69,9 +69,29 @@ body.single {
 
 .site-header {
   transform: rotate(-2deg);
+  font-family: $base-font-family;
+
+  h1 {
+      font-size: 48px;
+      margin: 0;
+      line-height: 1;
+      a {
+          color: $text-color;
+          text-decoration: none;
+      }
+  }
+
+  p {
+      margin: 0;
+      font-size: $big-font-size;
+  }
 }
 .archive .post-header {
   transform: rotate(1deg);
+  h1 {
+    line-height: 1;
+    margin: $base-font-size 0 $base-font-size/2;
+  }
 }
 
 
@@ -197,6 +217,10 @@ ul.post-list:after {
       width: 100%;
       height: auto;
     }
+  }
+  a {
+    color: $text-color;
+    text-decoration: none;
   }
   .photo-label {
     font-size: $base-font-size;
