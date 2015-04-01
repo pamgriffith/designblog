@@ -14,6 +14,13 @@
 #
 # See the documentation for full configuration and usage instructions.
 
+# Modified by Pam Griffith to allow multiple resize modes for images that are too small:
+# - "ratio" for the biggest possible that maintains the provided width/height aspect ratio
+# - "max" to resize dimensions that are too large to the given width/height but take the original of dimentions that are too small
+#   (e.g. a 400x200 image resized to 300x300 will come out 300x200)
+# - "fill" to do as above but fill the remaining space with a given "fillcolor"
+# Modes must be set in presets, they don't work in tags
+
 require 'fileutils'
 require 'pathname'
 require 'digest/md5'
@@ -53,16 +60,24 @@ module Jekyll
         {
           :width => preset['width'],
           :height => preset['height'],
-          :src => markup[:image_src]
+          :src => markup[:image_src],
+          :mode => preset['mode'] || 'ratio',             # valid values are ratio, max, and fill
+          :fillcolor => preset['fillcolor'] || 'white'    # only needed if mode=fill
         }
       elsif dim = /^(?:(?<width>\d+)|auto)(?:x)(?:(?<height>\d+)|auto)$/i.match(markup[:preset])
         {
           :width => dim['width'],
           :height => dim['height'],
-          :src => markup[:image_src]
+          :src => markup[:image_src],
+          :mode => 'ratio',
+          :fillcolor => 'white'
         }
       else
-        { :src => markup[:image_src] }
+        {
+          :src => markup[:image_src],
+          :mode => 'ratio',
+          :fillcolor => 'white'
+        }
       end
 
       # Process html attributes
@@ -133,12 +148,26 @@ module Jekyll
         orig_height
       end
       gen_ratio = gen_width/gen_height
+      extent_width = gen_width
+      extent_height = gen_height
 
       # Don't allow upscaling. If the image is smaller than the requested dimensions, recalculate.
       if orig_width < gen_width || orig_height < gen_height
         undersize = true
-        gen_width = if orig_ratio < gen_ratio then orig_width else orig_height * gen_ratio end
-        gen_height = if orig_ratio > gen_ratio then orig_height else orig_width/gen_ratio end
+        if instance[:mode] == 'ratio'
+          gen_width = if orig_ratio < gen_ratio then orig_width else orig_height * gen_ratio end
+          gen_height = if orig_ratio > gen_ratio then orig_height else orig_width/gen_ratio end
+          extent_width = gen_width
+          extent_height = gen_height
+        elsif instance[:mode] == 'max'
+          if orig_width < gen_width then gen_width = orig_width end
+          if orig_height < gen_height then gen_height = orig_height end
+          extent_width = gen_width
+          extent_height = gen_height
+        elsif instance[:mode] == 'fill'
+          if orig_width < gen_width then gen_width = orig_width end
+          if orig_height < gen_height then gen_height = orig_height end
+        end
       end
 
       gen_name = "#{basename}-#{gen_width.round}x#{gen_height.round}-#{digest}#{ext}"
@@ -162,6 +191,8 @@ module Jekyll
           i.gravity "center"
           i.crop "#{gen_width}x#{gen_height}+0+0"
           i.layers "Optimize"
+          i.extent "#{extent_width}x#{extent_height}^"
+          i.background instance[:fillcolor]
         end
 
         image.write gen_dest_file

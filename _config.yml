@@ -22,6 +22,10 @@ image:
     thumb:
       width: 300
       height: 300
+      mode: 'fill'
+      fillcolor: 'white'
+    big:
+      width: 748
 
 # Pagination
 paginate: 10
