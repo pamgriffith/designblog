@@ -1,0 +1,14 @@
+---
+layout: post
+title: IMDB
+categories:
+- FAQ
+featured_image: '2013/05/imdb-faq-search-1.png'
+---
+IMDB has a table of contents for categories of questions, with a box of shortcuts to the most popular questions.
+
+{% image big 2013/05/imdb-faq-search-1.png alt="IMDB FAQ page with table of contents on the left and popular questions on the right" %}
+
+You can search the FAQs. By default it only shows the top 5.
+
+{% image big 2013/05/imdb-faq-search-2.png alt="15 matches total. Displaying the top 5." %}
