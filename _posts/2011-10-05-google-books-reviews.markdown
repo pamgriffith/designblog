@@ -2,11 +2,9 @@
 layout: post
 title: Google Books Reviews
 categories:
-- Reviews
+- Comments
 tags:
-- review
-- histogram
-- faceted search
+- Reviews
 featured_image: '2011/10/google-book-reviews.png'
 ---
 {% image big 2011/10/google-book-reviews.png alt="'Freakonomics' on google books with title and shopping options in left column, reviews in center, and ratings histogram and filters for rating, type and source in right column" %}

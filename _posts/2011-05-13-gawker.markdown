@@ -1,0 +1,20 @@
+---
+layout: post
+title: Gawker
+categories:
+- Comments
+tags:
+- Metamoderation
+featured_image: '2011/05/lifehacker-featured.png'
+---
+Gawker's default view of comments limits the visible comments to just "featured" ones. You have to go to the "All" tab to get everything.
+
+{% image big 2011/05/lifehacker-featured.png alt="Comments from a Gawker site showing just featured comments with additional buttons for 'All' and 'Start a new thread'" %}
+
+The "All" tab shows more comments, but not all of them. There is a "Show all discussions" link at the bottom to get comments that have been hidden (commenters with no or low reputation get the comments hidden automatically).
+
+{% image big 2011/05/lifehacker-all.png alt="'Show all discussions' link below comments" %}
+
+Hidden items show up in gray in between black items that were there before, no new page load, very disconcerting (where is the stuff I was looking at? where is the top?) "Show earlier discussions" loads comments inline below.
+
+{% image big 2011/05/lifehacker-all-more.png alt="More comments appear in gray between previously visible comments" %}
