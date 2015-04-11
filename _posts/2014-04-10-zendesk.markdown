@@ -1,0 +1,14 @@
+---
+layout: post
+title: Zendesk
+categories:
+- Features Pages
+featured_image: '2012/04/zendesk-features.png'
+---
+Zendesk has both a features page and a tour. The "highlighted features" page is very high-level, with just some icons, feature names, and a sentence of description.
+
+{% image big 2012/04/zendesk-features.png alt="Zendesk 'highlighted features'" %}
+
+The tour has several paragraphs for each feature, and has roughly the same number of pages as there are highlighted features, but they are not the same features.
+
+{% image big 2012/04/zendesk-tour.png alt="First page of Zendesk's product tour" %}

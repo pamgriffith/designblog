@@ -1,0 +1,14 @@
+---
+layout: post
+title: Spotify
+categories:
+- Features Pages
+featured_image: '2012/04/spotify-features.jpg'
+---
+The spotify features page has tabs on the left for each feature. The first is an overview, and it has a screenshot of the various devices Spotify works with above a grid of features, each with an image and description and link to the tab with a longer description.
+
+{% image big 2012/04/spotify-features.jpg alt="Spotify features overview" %}
+
+The tabs for each single feature have multiple sections with a heading, a few paragraphs of text, and a screenshot alternating left and right. At the bottom are links to next and previous features.
+
+{% image big 2012/04/spotify-single-feature.jpg alt="Single feature tab" %}

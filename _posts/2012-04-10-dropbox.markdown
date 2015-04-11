@@ -1,0 +1,10 @@
+---
+layout: post
+title: Dropbox Tour
+categories:
+- Features Pages
+featured_image: '2012/04/dropbox-tour.png'
+---
+Dropbox styles their features page like a book. The first page has a table of contents of the features, and you can click those or page through.
+
+{% image big 2012/04/dropbox-tour.png alt="Dropbox tour table of contents" %}
