@@ -1,0 +1,10 @@
+---
+layout: post
+title: Lynda
+categories:
+- Online Courses
+featured_image: '2012/05/lynda-video.png'
+---
+Lynda divides each course into a number of sections, with several videos for each section. Individual videos within each topic can be bookmarked for later reference.
+
+{% image big 2012/05/lynda-video.png alt="Accordion list of topics in the course with a list of video links for each topic. Time and an icon indicating if the video has been viewed is available for each video." %}

@@ -1,0 +1,10 @@
+---
+layout: post
+title: Coursera
+categories:
+- Online Courses
+featured_image: '2012/05/coursera-videos.png'
+---
+Coursera divides courses into sections, often one per week, with a list of videos for each week.
+
+{% image big 2012/05/coursera-videos.png alt="Accordion list of weeks in the course with a list of video links for each week. Length is shown for each video and there are several icons for each." %}

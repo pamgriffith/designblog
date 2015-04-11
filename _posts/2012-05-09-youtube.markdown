@@ -1,0 +1,18 @@
+---
+layout: post
+title: YouTube
+categories:
+- Online Courses
+featured_image: '2011/02/youtube-channel-playlists-3.jpg'
+---
+Stanford uses YouTube channels and playlists to present online course videos.
+
+{% image big 2011/02/youtube-channel-playlists-1.jpg alt="Default channel video and list of courses as playlists" %}
+
+Each course is a playlist of videos. Clicking a course playlist brings up a truncated description of the course and a list of videos in the course. Stanford has labelled theirs with "Lecture N | Course Name".
+
+{% image big 2011/02/youtube-channel-playlists-2.jpg alt="Sidebar with course name and videos" %}
+
+Each course (playlist) also has a dedicated page with the full description and list of videos.
+
+{% image big 2011/02/youtube-channel-playlists-3.jpg alt="Course page with description and grid of video thumbnails" %}

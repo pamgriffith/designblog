@@ -1,0 +1,10 @@
+---
+layout: post
+title: Copernic
+categories:
+- Language Selectors
+featured_image: '2011/04/copernic.jpg'
+---
+This site just has a simple English | Françes language selector in the top right.
+
+{% image big 2011/04/copernic.jpg alt="Simple two-language selector" %}
