@@ -169,7 +169,7 @@ module Jekyll
         end
       end
 
-      gen_name = "#{basename}-#{gen_width.round}x#{gen_height.round}#{ext}"
+      gen_name = "#{basename}-#{extent_width.round}x#{extent_height.round}#{ext}"
       gen_dest_dir = File.join(site_dest, image_dest, image_dir)
       gen_dest_file = File.join(gen_dest_dir, gen_name)
 
