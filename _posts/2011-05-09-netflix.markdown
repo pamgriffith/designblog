@@ -1,0 +1,18 @@
+---
+layout: post
+title: Netflix
+categories:
+- Recommendations
+featured_image: '2011/05/netflix-why-recommended.jpg'
+---
+Netflix movie pages show you similar movies that you have rated highly to explain why they think you might like it.
+
+{% image big 2011/05/netflix-why-recommended.jpg alt="'Why this is recommended' section below synopsis shows your ratings for similar movies" %}
+
+When you add something to your queue it shows you similar things you might also want to watch.
+
+{% image big 2011/05/netflixRecommendations.png alt="A popup shows you something as been added to the queue and has a grid of thumbnails of similar movies with buttons to add those to the queue, too" %}
+
+New users are prompted to rate some movies after creating an account so Netflix knows what to recommend
+
+{% image big 2011/05/netflix-recommendation-new-user.jpg alt="Grid of thumbnails with star rating buttons below" %}

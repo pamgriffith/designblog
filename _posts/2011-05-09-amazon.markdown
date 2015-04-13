@@ -1,0 +1,18 @@
+---
+layout: post
+title: Amazon
+categories:
+- Recommendations
+featured_image: '2011/05/amazon-recommendations.png'
+---
+Amazon has multiple kinds of recommendations. They have the most as "Today's recommendations" in a carousel, then just a couple of upcoming or new recommendations, and a couple things from your wishlist.
+
+{% image big 2011/05/amazon-recommendations.png alt="Multiple types of recommendations on Amazon" %}
+
+New users are prompted to rate things so Amazon knows what to recommend.
+
+{% image big 2011/05/amazon-recommendations-new-user.png alt="Today's recommendations are replaced with a box explaining recommendations and a search box to search for and rate things" %}
+
+Amazon allows you to fix your recommendations by excluding some ratings or purchases from influencing the recommendations
+
+{% image big 2011/05/amazon-fix-recommendation.png alt="Pop-up showing what items caused Amazon to recommend something with a checkbox not to use for recommendations" %}
